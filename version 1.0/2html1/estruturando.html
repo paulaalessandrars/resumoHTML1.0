@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos Básicos</title>
+</head>
+<body style="background-color: rgb(213, 213, 249);">
+    <strong><h1 id="estruturando" style="color: rgb(244, 119, 16);">Estruturando seu HTML + Formatações</h1></strong>
+    <small>
+        <<
+        <a href="../index.html">(Voltar para a pagina inicial)</a>
+    </small>
+    <br>
+    <br>
+    <hr>
+
+    <h2>Índice</h2>
+        <ol>
+            <li><a href="#divspan">DIV E SPAN</a></li>
+            <li><a href="#field">FIELDSET</a></li>
+            <li><a href="#beds">EMBEDS</a></li>
+            <li><a href="#cor">CORES</a></li>
+        </ol>
+        <hr>
+        <br>
+
+
+    <h3 id="divspan"><strong>1. Div e Span</strong></h3>
+
+    <small><a href="#estruturando">(voltar)</a></small>
+        <br>
+        
+
+        <p>As tags div e span são elementos fundamentais do HTML utilizados para organizar e estilizar o conteúdo de uma página web.</p>
+
+        <p>A tag div é um elemento de bloco que é usado para criar divisões ou seções distintas em uma página. Ela não possui significado semântico próprio, sendo usada principalmente para agrupar e formatar outros elementos, como texto, imagens, formulários, etc. É muito utilizada para aplicar estilos CSS ou para facilitar a manipulação do conteúdo por meio de scripts.</p>
+            
+        <p>Por outro lado, a tag span é um elemento de linha que também não possui significado semântico. Ela é usada para aplicar estilos a partes específicas de um texto ou conteúdo, sem que isso afete a estrutura do documento. Geralmente, o span é utilizado quando é necessário aplicar um estilo ou manipular um pequeno trecho de texto dentro de um parágrafo, por exemplo.</p>
+            
+        <p>Em resumo, div é usado para dividir e organizar o conteúdo em blocos maiores, enquanto span é usado para estilizar ou manipular partes menores do conteúdo, como palavras ou frases. Ambas as tags são fundamentais para a estruturação e estilização de páginas web modernas.</p>
+
+        <h4>Exemplo de div:</h4>
+            <style>
+                .container {
+                    width: 80%;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #f0f0f0;
+                    border: 1px solid #ccc;
+                }
+
+                .apache {
+                    width: 60%;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #c58d8d;
+                    border: 1px solid #c78d8d;
+                }
+
+
+            </style>
+
+            <div class="container">
+                <h1>Título da Página</h1>
+                <p>Este é um exemplo de uso da tag div para criar uma divisão na página.</p>
+                
+                <div class="apache">
+                    <h2>Exemplo de div dentro de uma div</h2>
+                </div>
+            </div>
+
+
+        <h4>Exemplo de span:</h4>
+            <style>
+                .destacado {
+                    color: red;
+                    font-weight: bold;
+                }
+            </style>
+
+            <p>Este é um <span class="destacado">texto destacado</span> utilizando a tag span.</p>      
+        <br>
+
+
+
+    <h3 id="field"><strong>2. Fieldset</strong></h3>
+
+    <small><a href="#estruturando">(voltar)</a></small>
+        <br>
+        
+
+        <p>A tag fieldset no HTML é usada para agrupar partes de um formulário, ajudando a organizar os campos e tornar o formulário mais fácil de entender.</p>
+        
+        <b>Estrutura Básica:</b>
+        <br>
+        Imagine que você está criando um formulário de contato. Você pode usar a tag fieldset para agrupar campos relacionados, como informações pessoais e detalhes da mensagem.
+        <br>
+        <br>
+
+        <form>
+            <fieldset>
+              <legend>Informações Pessoais</legend>
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome"><br><br>
+              
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+            </fieldset>
+            <br>
+
+            <fieldset>
+              <legend>Mensagem</legend>
+              <label for="assunto">Assunto:</label>
+              <input type="text" id="assunto" name="assunto"><br><br>
+              
+              <label for="mensagem">Mensagem:</label>
+              <textarea id="mensagem" name="mensagem"></textarea>
+            </fieldset>
+            <br>
+
+            <input type="submit" value="Enviar">
+          </form>
+          <hr>
+          <br>
+          
+
+        <h4>Explicação:</h4>
+        <p><b>form: </b>Cria um formulário.</p>
+        <p><b>fieldset: </b>Agrupa campos relacionados dentro do formulário.</p>
+        <b>legend: </b>Dá um título ao grupo de campos.
+        <br>
+        <br>
+        <h4>Benefícios:</h4>
+        <p><b>Organização: </b>Mantém os campos do formulário organizados.</p>
+        <p><b>Facilidade de uso: </b>Facilita a leitura e o preenchimento do formulário.</p>
+        <p><b>Estilo: </b>Você pode usar CSS para estilizar os grupos de campos.</p>
+        <br>
+
+
+
+    <h3 id="beds"><strong>3. Embeds</strong></h3>
+
+    <small><a href="#estruturando">(voltar)</a></small>
+        <br>
+        
+
+        <p>No HTML, "embeds" referem-se a tags que permitem incorporar conteúdo de diferentes fontes ou formatos dentro de uma página web. Aqui estão algumas das principais tags de "embeds" e suas funções:</p>
+
+          <ul>
+            <li>
+                <b>iframe: </b>A tag iframe é usada para incorporar outra página HTML dentro de uma página HTML. Posso incorporar inclusive um mapa do google maps e videos do youtube.
+                <p>Exemplo:</p>
+                <iframe src="https://www.dio.me" width="600" height="400"></iframe>
+
+                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.0473448502207!2d-48.61868810459672!3d-28.023028737368463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9526d14b0432914d%3A0xa2aabb9e6a1d3a2f!2sCentro%20Hist%C3%B3rico%20de%20Garopaba!5e0!3m2!1spt-BR!2sbr!4v1719237860798!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+                <p><iframe width="560" height="315" src="https://www.youtube.com/embed/TTdBiwgVkME?si=KLiZWAXq6t1rDylS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+                
+                    <p><b>src: </b>Define a URL da página que será incorporada.
+                    <br>
+                    <b>width e height: </b>Define a largura e altura do iframe. 
+                    </p>
+            </li>
+            <br>
+
+
+            <li>
+                <b>embed: </b>A tag embed é usada para incorporar conteúdo de diferentes tipos, como PDFs, vídeos e áudio.
+                <p>Exemplos:</p>
+                    PDF:
+                    <p><embed src="midia/alessandra.pdf" type="application/pdf" width="600" height="400"></p>
+
+                    VÍDEO:
+                    <p><embed src="midia/movie.mp4" type="video/mp4" width="600" height="400"></p>
+                    
+                    ÁUDIO:
+                    <p><embed src="midia/audio.mp3" type="audio/mp3" width="300" height="300" /></p>
+                    
+                    <b>Explicação:</b>
+                    <p><b>src: </b>Define a URL do arquivo a ser incorporado.</p>
+                    <b>type: </b>Define o tipo de conteúdo a ser incorporado.
+                    <p><b>width e height: </b>Define a largura e altura do conteúdo incorporado.</p>
+            </li>
+            <br>
+
+
+            <li>
+                <b>object: </b>A tag object é usada para incorporar diferentes tipos de conteúdo, como imagens, vídeos, PDF, ou mesmo outra página HTML.
+                <p>Exemplos:</p>
+
+                    IMAGEM:
+                    <p><object data="midia/campo.jpeg" type="image/jpeg" width="600" height="400">
+                        <p>Seu navegador não suporta exibição de PDFs. <a href="midia/campo.jpeg">Baixe a imagem</a>.</p>
+                    </object>
+                    </p>
+
+                    VÍDEO:
+                    <p><object data="midia/movie.mp4" type="video/mp4" width="600" height="400">
+                        <p>Seu navegador não suporta exibição de PDFs. <a href="midia/movie.mp4">Baixe o vídeo</a>.</p>
+                    </object></p>
+
+                    PDF:
+                    <p><object data="midia/alessandra.pdf" type="application/pdf" width="600" height="400">
+                        <p>Seu navegador não suporta exibição de PDFs. <a href="midia/alessandra.pdf">Baixe o PDF</a>.</p>
+                    </object></p>
+
+                    PÁGINA HTML:
+                    <p><object data="https://www.example.com" type="text/html" width="600" height="400">
+                        <p>Seu navegador não suporta exibição de PDFs. <a href="https://www.google.com.br">Acesse</a>.</p>
+                    </object></p>
+                    
+                    <b>Explicação:</b>
+                    <p><b>data: </b>Define a URL do arquivo a ser incorporado.</p>
+                    <b>type: </b>Define o tipo de conteúdo a ser incorporado.
+                    <p><b>width e height: </b>Define a largura e altura do conteúdo incorporado.</p>
+            </li>
+            <br>
+
+
+            <li>
+                <p><b>video: </b>A tag video é usada para incorporar vídeos diretamente na página HTML.</p>
+        
+                    Exemplo:
+                    <p><video width="600" height="400" controls autoplay>
+                        <source src="midia/movie.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                    </p>
+                    
+                    <p><b>Explicação:</b></p>
+                    <p><b>controls: </b>Adiciona controles de reprodução ao vídeo.
+                    <br>
+                    <b>source: </b>Define a URL do arquivo de vídeo e o tipo de vídeo.
+                    </p>
+            </li>
+            <br>
+
+
+            <li>
+                <p><b>audio: </b>A tag audio é usada para incorporar áudio diretamente na página HTML.</p>
+        
+                    <p>Exemplo:</p>
+                    <audio controls>
+                        <source src="midia/audio.mp3" type="audio/mp3">
+                        Seu navegador não suporta a tag de áudio.
+                    </audio>
+                      
+                    
+                    <p><b>Explicação:</b></p>
+                    <p><b>controls: </b>Adiciona controles de reprodução ao áudio.
+                    <br>
+                    <b>source: </b>Define a URL do arquivo de áudio e o tipo de áudio.
+                    </p>
+            </li>
+            <br>
+          </ul>
+        
+          
+          
+<h3 id="cor"><strong>4. Cores</strong></h3>
+
+<small><a href="#estruturando">(voltar)</a></small>
+<br>   
+      
+    <p>Cores no HTML são definidas usando CSS (Cascading Style Sheets) e podem ser especificadas de várias maneiras diferentes, incluindo nomes de cores, valores hexadecimais, RGB, RGBA, HSL e HSLA. Aqui estão algumas maneiras comuns de definir cores no HTML com exemplos:</p>
+
+          <ul>
+            <li>
+                <p><b>Nome das Cores: </b>O CSS suporta uma lista de nomes de cores predefinidos que podem ser usados diretamente. Alguns exemplos incluem red, blue, green, black, white, entre outros.</p>
+
+                <style>
+                    .nome-cor {
+                    background-color: red; /* Nome de cor */
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                    }
+                </style>
+                
+                <div class="nome-cor">Esta é uma cor chamada "red".</div>       
+        
+        
+                
+            </li>
+            <br>
+
+
+            <li>
+                <p><b>Valores Hexadecimais: </b>Cores também podem ser especificadas usando valores hexadecimais. Um valor hexadecimal começa com # seguido por seis dígitos/letras, representando os valores de vermelho, verde e azul (RGB).</p>
+
+                <style>
+                    .cor-hex {
+                    background-color: #ff6347; /* Hexadecimal para tomatinho */
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                    }
+                </style>
+
+                <div class="cor-hex">Esta é uma cor hexadecimal (#ff6347).</div>
+            </li>
+            <br>
+
+
+
+            <li>
+                <p><b>Valores RGB: </b>As cores podem ser definidas usando o modelo RGB (Red, Green, Blue). Os valores variam de 0 a 255.</p>
+
+                <style>
+                    .cor-rgb {
+                    background-color: rgb(60, 179, 113); /* RGB para verde-marinho */
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                    }
+                </style>
+
+                <div class="cor-rgb">Esta é uma cor RGB (60, 179, 113).</div>       
+
+            </li>
+            <br>
+
+
+            <li>
+                <p><b>Valores RGBA: </b>RGBA é como RGB, mas com um canal alfa adicional que define a opacidade. O valor alfa varia de 0 (totalmente transparente) a 1 (totalmente opaco).</p>
+
+                <style>
+                    .cor-rgba {
+                      background-color: rgba(255, 99, 71, 0.5); /* RGBA para tomatinho com 50% de opacidade */
+                      color: white;
+                      padding: 10px;
+                      text-align: center;
+                    }
+                </style>
+
+                <div class="cor-rgba">Esta é uma cor RGBA (255, 99, 71, 0.5).</div>      
+
+            </li>
+            <br>
+
+
+            <li>
+                <p><b>Valores HSL: </b>HSL (Hue, Saturation, Lightness) é uma maneira alternativa de definir cores. O matiz (hue) é um valor de 0 a 360 representando um ângulo no círculo de cores, a saturação e a luminosidade são porcentagens.</p>
+
+                <style>
+                    .cor-hsl {
+                      background-color: hsl(120, 60%, 70%); /* HSL para verde claro */
+                      color: white;
+                      padding: 10px;
+                      text-align: center;
+                    }
+                </style>
+
+                <div class="cor-hsl">Esta é uma cor HSL (120, 60%, 70%).</div>      
+
+            </li>
+            <br>
+
+
+            <li>
+                <p><b>Valores HSLA: </b>HSLA é como HSL, mas com um canal alfa adicional para definir a opacidade.</p>
+
+                <style>
+                    .cor-hsla {
+                      background-color: hsla(120, 60%, 70%, 0.5); /* HSLA para verde claro com 50% de opacidade */
+                      color: white;
+                      padding: 10px;
+                      text-align: center;
+                    }
+                </style>
+
+                <div class="cor-hsla">Esta é uma cor HSLA (120, 60%, 70%, 0.5).</div>         
+
+            </li>
+          </ul>
+          <br>
+
+
+          <style>
+            .site {
+                background-color: rgb(32, 211, 151);
+                color: #362c2c;
+                padding: 20px;
+                text-align: center;
+            }
+          </style>
+
+
+          <div class="site"><p><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">Aqui no w3 schools você pode saber mais sobre os tipos de cores.</a></p></div>
+
+ 
+    
+        <hr>
+        <br>
+        <small>
+            <<
+            <a href="../index.html">(Voltar para a pagina inicial)</a>
+        </small>  
+        <br>
+        <br>

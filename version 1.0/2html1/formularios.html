@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos Básicos</title>
+</head>
+<body style="background-color: rgb(213, 213, 249);">
+    <strong><h1 id="formularios" style="color: rgb(244, 119, 16);">Trabalhando com Furmulários</h1></strong>
+    <small>
+        <<
+        <a href="../index.html">(Voltar para a pagina inicial)</a>
+    </small>
+    <br>
+    <br>
+    <hr>
+
+    <h2>Índice</h2>
+        <ol>
+            <li><a href="#form">TAGS FORM</a></li>
+            <li><a href="#input">TAG INPUT E SEUS TIPOS</a></li>
+            <li><a href="#button">BUTTON E SEUS TIPOS</a></li>
+            <li><a href="#select">SELECT E SEUS TIPOS</a></li>
+            <li><a href="#textarea">TEXTAREA</a></li>
+        </ol>
+        <hr>
+        <br>
+
+
+    <h3 id="form"><strong>1. Tags Form:</strong></h3>
+
+    <small><a href="#formularios">(voltar)</a></small>
+        <br>
+        <br>
+
+        1.1. A tag form serve para criar formulários, voce abre a tag e depois informa os campos necessários utilizando o input type, ele pode ser de diversos tipos. Nesse caso foi utiliado o type text, number e password. Por ultimo utilizado um button submit para enviar as informações preenchidas no formulário.
+        
+        <p>1.2. É possível nomear o formulário, utilizado o atributo name no form para que então voce possa utilizar a programação em javascript para refinar melhor as informações.</p>
+        
+        <p>1.3. Ainda podemos usar o atributo action dentro do form para enviar as informações para o servidor que desejamos.</p>
+      
+        <p>1.4 O atributo method é usado em elementos form em HTML para especificar como os dados do formulário devem ser enviados ao servidor. Existem dois valores principais para o atributo method:</p>
+            <p>GET: Os dados do formulário são anexados à URL como uma string de consulta. Isso é adequado para formulários que não alteram ou adicionam dados no servidor e que têm um limite de tamanho de URL.</p>
+            
+            <p>POST: Os dados do formulário são incluídos no corpo da requisição HTTP. Isso é usado para formulários que podem alterar ou adicionar dados no servidor e não têm limitações de tamanho de dados. O mais seguro é sempre utilizar o metodo post para que nao apareça o dados na url.</p>
+
+        <p>1.5. O atributo target no elemento form do HTML é usado para especificar onde abrir a resposta do formulário após o envio. Por exemplo, você pode usar target="_blank" para abrir a resposta em uma nova aba ou _self para abrir na mesma.</p>
+
+        <p>1.6. O atributo autocomplete na tag form do HTML serve para controlar como o navegador preenche automaticamente os campos do formulário.</p>
+        
+            <p>autocomplete="on" (padrão): O navegador pode salvar e preencher automaticamente os dados do usuário em campos específicos, como nome, email e senha. Isso facilita o preenchimento de formulários repetitivos, mas pode representar um risco de segurança se o computador for compartilhado.</p>
+            <p>autocomplete="off": O navegador não salva ou preenche automaticamente nenhum dado do formulário. O usuário precisa digitar todas as informações manualmente, o que pode ser mais lento, mas é mais seguro.</p>
+            <p>Valores específicos: Você pode especificar quais tipos de dados o navegador deve ou não preencher automaticamente. Por exemplo, autocomplete="email" permite que o navegador preencha automaticamente apenas campos de email, enquanto autocomplete="off" desativa o autopreenchimento para todos os campos.</p>
+        
+        <p>1.7. O poder do onsubmit em HTML: Domine seus formulários!
+        O atributo onsubmit em HTML te dá a superpotência de executar ações quando um formulário for enviado. Imagine um botão de "Enviar" que, além de enviar o formulário, também valida os dados, exibe uma mensagem de sucesso ou redireciona para outra página. Tudo isso é possível com o onsubmit!</p>
+        
+        Como funciona:
+        <ol>
+            <li>O usuário clica no botão "Enviar".</li>
+            <li>O evento onsubmit é acionado.</li>
+            <li>O código JavaScript que você escreveu é executado.</li>
+            <li>O formulário é enviado (ou não, se você cancelar o envio).</li>
+        </ol>
+
+        O que você pode fazer com o onsubmit:
+        <ul>
+            <li> Validar dados: Verifique se o usuário preencheu tudo corretamente e se os formatos dos dados estão ok (email, telefone, etc.).</li>
+            <li>Exibir mensagens: Mostre alertas de erro ou sucesso para o usuário.</li>
+            <li>Evitar envios indesejados: Cancele o envio do formulário caso a validação falhe.</li>
+            <li>Executar ações AJAX: Atualize partes da página sem recarregar tudo.</li>
+            <li>Redirecionar para outra página: Leve o usuário para um novo local após o envio.</li>
+        </ul>
+            <br>
+
+        <h4><strong>Exemplo:</strong></h4>
+
+            <form name="sighup" onsubmit="alert('Formulário enviado!');" autocomplete="on" target="_self" method="post" action="https://meusite.com.br/signup">
+                <br>
+                Formulário de Cadastro:
+                <br>
+                <br>
+                Nome: <input type="text" name="name">
+                <br>
+                <br>
+                Idade: <input type="number" age="age">
+                <br>
+                <br>
+                Senha: <input type="password" name="password">
+                <br>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+            <br>
+            <br>
+        
+
+
+    <h3 id="input"><strong>2. Tag Input e Seus Tipos:</strong></h3>
+
+    <small><a href="#formularios">(voltar)</a></small>
+        <br>
+        <br>
+
+        <p>O elemento input é a chave para criar campos de formulário interativos em HTML. Com ele, você dá vida a diversos tipos de inputs, como caixas de texto, botões, menus suspensos e muito mais!</p>
+        Atributos principais e seus exemplos:
+        <br>
+        <br>
+        <strong>2.1. type: </strong> Define o tipo de input. Exemplos:
+
+            <ul>
+                <li><strong>Text: </strong>O input type="text" é uma caixa de texto genérica em HTML. O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <label>Digite seu nome aqui: </label><input type="text">
+                </li> 
+                <br>
+
+                <li><strong>Number: </strong>Caixa de número genérica. Posso definir o número mínimo e máximo para esse campo utilizando o min e o max após o number; nesse caso eu defini o número mínimo como 20 e o máximo como 120. Também consigo definir se quero que ele conte de 5 em 5, 10 em 10 e assim por diante usando o step; nesse caso ele conta de 10 em 10.
+                    <br>
+                    <label>Digite sua idade aqui: </label><input type="number" min="20" max="120" step="10">
+                </li>    
+                <br>
+
+                <li><strong>Button: </strong>O input type="button é um botão" em HTML. O value define o que estara escrito dentro da caixa botão. Semanticamente é melhor utilizar o button para botão e não o type button, pois consigo visualizar melhor que é um botão. Abaixo os dois exemplos:
+                    <br>
+                    <label>Clique aqui para enviar </label><input type="button" value="Enviar">
+                    <br>
+                    <label>Clique aqui para enviar </label><button type="button">Enviar</button>
+                </li> 
+                <br>
+
+                <li><strong>Range: </strong>O input type="range" em HTML te dá o poder de criar sliders interativos em seus sites e aplicações! Imagine um controle deslizante para ajustar o volume, escolher uma cor ou definir o nível de zoom. Com o input type="range", tudo isso é possível e muito mais! Também é possível configurar um mínimo, máximo e o valor inicial utilizando o min, max e value respectivamente.
+                    <br>
+                    <label>Volume: </label><input type="range" min="0" max="200" value="10">
+                </li> 
+                <br>
+
+                <li><strong>Color: </strong>No HTML, o input do tipo color permite ao usuário selecionar uma cor. Esse elemento gera um seletor de cores que, ao ser clicado, abre uma interface gráfica onde é possível escolher a cor desejada. Quando uma cor é selecionada, o valor hexadecimal correspondente é armazenado no campo de entrada. O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <label>Escolha a cor: </label><input type="color">
+                </li> 
+                <br>
+
+                <li><strong>E-mail: </strong>No HTML, o input do tipo email cria um campo de entrada para endereços de e-mail. Esse campo valida automaticamente o formato do e-mail, garantindo que o usuário insira um valor que contenha "@" e um domínio válido. O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <label>Informe seu e-mail: </label><input type="email">
+                    <button type="submit">Enviar</button>
+                </li> 
+                <br>
+
+                <li><strong>URL: </strong>No HTML, o input do tipo url cria um campo de entrada para URLs. Esse campo valida automaticamente o formato da URL, garantindo que o usuário insira um valor que comece com "http://" ou "https://". O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <label>Informe a URL: </label><input type="url">
+                    <button type="submit">Enviar</button>
+                </li> 
+                <br>
+
+                <li><strong>Date: </strong>No HTML, o input do tipo date cria um campo de entrada para datas. Esse campo fornece um seletor de data que permite ao usuário escolher um dia, mês e ano. O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <label>Agende aqui: </label><input type="date">
+                </li> 
+                <br>
+
+                <li><strong>Week: </strong>No HTML, o input do tipo week cria um campo de entrada para selecionar uma semana específica do ano. Esse campo permite ao usuário escolher uma semana e um ano, exibindo a semana no formato "YYYY-Www". O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <label>Agende aqui: </label><input type="week">
+                </li> 
+                <br>
+
+                <li><strong>Month: </strong>No HTML, o input do tipo month cria um campo de entrada para selecionar um mês e ano. Esse campo permite ao usuário escolher um mês dentro de um ano específico. O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <label>Agende aqui: </label><input type="month">
+                </li> 
+                <br>
+
+                <li><strong>Hidden: </strong>No HTML, o input do tipo hidden cria um campo de entrada que não é visível para o usuário. Esse campo é usado para armazenar informações que precisam ser enviadas ao servidor, mas que não devem ser exibidas ou editadas pelo usuário.
+                    <br>
+                    <label></label><input type="hidden">
+                </li> 
+                <br>
+
+                <li><strong>File: </strong>No HTML, o input do tipo file cria um campo de entrada que permite ao usuário selecionar arquivos de seu dispositivo para upload. Pode ser utilizado o multiple para adicionar mais de uma arquivo por vez, pois o padrão do file é apenas um arquivo por vez. O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <label>Adicione o arquivo aqui: </label><input type="file" multiple>
+                </li> 
+                <br>
+
+                <li><strong>Search: </strong>No HTML, o input do tipo search cria um campo de entrada especificamente estilizado e otimizado para pesquisas. Esse campo geralmente inclui características adicionais, como a possibilidade de limpar o texto rapidamente. O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <label>Pesquisar: </label><input type="search">
+                </li> 
+                <br>
+
+                <li><strong>Chekbox: </strong>
+                    No HTML,  o input do tipo checkbox cria uma caixa de seleção que permite ao usuário marcar uma ou mais opções de um conjunto de opções.
+                    <p>No exemplo abaixo, há três caixas de seleção (checkbox) com o atributo name="opcional[]". Isso indica que essas caixas de seleção fazem parte de um grupo chamado opcional e que múltiplas opções podem ser selecionadas. Cada caixa de seleção tem um valor (value) associado que será enviado ao servidor quando a caixa for marcada. O texto após a caixa de seleção (+ queijo, + cebola, + azeitona) é uma descrição da opção que está sendo apresentada ao usuário.</p>
+                    
+                        <form method="get">
+                            <h5>OPCIONAIS PARA SUA PIZZA:</h5>
+                            <input type="checkbox" name="opcional[]" value="queijo"> + queijo
+                            <br>
+                            <input type="checkbox" name="opcional[]" value="cebola"> + cebola
+                            <br>
+                            <input type="checkbox" name="opcional[]" value="azeitona"> + azeitona
+                            <br>
+                            <br>
+                            <button type="submit">Enviar pedido</button>
+                        </form>
+
+                    <p>Agora imagine que o item cebola de sua lista está em falta e você precisa informar ao cliente, e impedir que ele selecione esse item. Para fazer isso você pode utilizar o disable no checkbox da cebola.
+                        <form method="get">
+                            <h5>OPCIONAIS PARA SUA PIZZA:</h5>
+                            <input type="checkbox" name="opcional[]" value="queijo"> + queijo
+                            <br>
+                            <input type="checkbox" disabled name="opcional[]" value="cebola"> + cebola
+                            <br>
+                            <input type="checkbox" name="opcional[]" value="azeitona"> + azeitona
+                            <br>
+                            <br>
+                            <button type="submit">Enviar pedido</button>
+                        </form>
+
+
+                    <p><strong>Obs.: </strong>Nunca esquecer de por o [] no name=opcional, pois sem o [] o servidor não entenderá que é uma lista e caso seja marcada mais de uma opção selecionará apenas a ultima opção enviada. Isso acontece, pois sem o [], o servidor entende que a opção foi trocada mais de uma vez, assim seleciona somente a ultima opção enviada.</p>
+                </li> 
+                <br>
+
+                <li><strong>Radio: </strong>
+                No HTML, o input do tipo radio cria botões de opção onde apenas uma opção pode ser selecionada por vez em um grupo de opções relacionadas. O ideal é sempre utilizar o label para indicação antes da caixa.
+
+                <p>No exemplo abaixo, há dois botões de opção (radio) com o atributo name="borda". Isso indica que esses botões fazem parte de um grupo chamado borda e apenas uma opção pode ser selecionada. Cada botão tem um valor (value) associado que será enviado ao servidor quando o formulário for enviado. Os botões de opção apresentam as opções "Sim" e "Não" para a pergunta "DESEJA BORDA?". O formulário usa o método get para enviar os dados para o servidor, e um botão de envio (submit) é fornecido para enviar o formulário.</p>
+                    <form method="get">
+                        <h5>DESEJA BORDA?</h5>
+                            <input type="radio" name="borda" value="sim"> Sim
+                            <br>
+                            <input type="radio" name="borda" value="nao"> Não
+                            <br>
+                            <br>
+                            <button type="submit">Enviar pedido</button>
+                    </form>
+
+                    <p>No exemplo abaixo, foi criado um formulário com o método GET, o qual será enviado quando o usuário clicar no botão "Enviar pedido". O formulário contém a pergunta "DESEJA BEBIDA?" seguida por quatro opções de bebida, representadas por botões de opção do tipo radio: "Suco", "Refrigerante", "Água" e "Nenhum". O usuário pode selecionar apenas uma opção. Cada botão de opção tem o atributo name definido como "bebida" para agrupá-los e o atributo value com o valor correspondente à opção. Quando o formulário é enviado, o valor da opção selecionada é incluído na URL como parte da query string.</p>
+                        <form method="get">
+                            <h5>DESEJA BEBIDA?</h5>
+                                <input type="radio" name="bebida" value="suco"> Suco
+                                <br>
+                                <input type="radio" name="bebida" value="refrigerante"> Refrigerante
+                                <br>
+                                <input type="radio" name="bebida" value="agua"> Água
+                                <br>
+                                <input type="radio" name="bebida" value="nenhum"> Nenhum
+                                <br>
+                                <br>
+                                <button type="submit">Enviar pedido</button>
+                        </form>
+                    
+                    <p>Agora imagine que o item água de sua lista está em falta e você precisa informar ao cliente, e impedir que ele selecione esse item. Para fazer isso você pode utilizar o disable no radio da agua.</p>
+                    <form method="get">
+                        <h5>DESEJA BEBIDA?</h5>
+                            <input type="radio" name="bebida" value="suco"> Suco
+                            <br>
+                            <input type="radio" name="bebida" value="refrigerante"> Refrigerante
+                            <br>
+                            <input type="radio" disabled name="bebida" value="agua"> Água
+                            <br>
+                            <input type="radio" name="bebida" value="nenhum"> Nenhum
+                            <br>
+                            <br>
+                            <button type="submit">Enviar pedido</button>
+                    </form>
+                </li> 
+                <br>
+            </ul>
+
+
+
+    <h3 id="button"><strong>3. Button e Seus Tipos:</strong></h3>
+
+    <small><a href="#formularios">(voltar)</a></small>
+    <br>
+    <br>
+
+        <p>O elemento button no HTML é usado para criar um botão clicável. Ele pode ser usado para submeter formulários, executar scripts, ou simplesmente para ações de botão genéricas. Os principais tipos de botão são:
+        </p>
+            <ul>
+                <li>
+                    <strong>Button: </strong>Comportamento padrão. Pode ser usado com JavaScript para criar interações personalizadas.
+                    
+                    <p>No exemplo abaixo temos um formulário que usa o método GET para enviar dados. Ele possui campos de entrada de texto para "name", número para "age", e senha para "password". As quebras de linha são feitas com br. O botão é definido com button type="button". O atributo type="button" indica que este botão não submete o formulário. Em vez disso, ele pode ser usado para acionar scripts JavaScript ou outras ações personalizadas sem recarregar a página ou enviar dados.</p>
+
+                    <p><strong>Obs.: </strong>No html é possível programar alguns alertas no botão, mas o melhor é fazer esse tipo de interação utilizando o javascript. Inseri um onclick alert apenas para exemplo, ou seja, quando clicar vai exibir uma mensagem de alerta.</p>
+                        <form method="get">
+                            <label>Nome: </label><input type="text" name="name">
+                            <br>
+                            <br>
+                            <label>Idade: </label><input type="number" name="age">
+                            <br>
+                            <br>
+                            <label>Senha: </label><input type="password" name="password">
+                            <br>
+                            <br>
+                            <button type="button" onclick="alert('Exemplo de botão onclick')">Clicável</button>
+                        </form>
+                </li>
+                <br>
+                <br>
+        
+
+                <li>
+                    <strong>Reset: </strong>Reseta os campos do formulário para os valores iniciais.
+                    
+                    <p>O exemplo abaixo mostra um formulário que solicita ao usuário que insira seu nome, idade e senha. Cada campo do formulário é composto por um rótulo label seguido por um campo de entrada input. O atributo name de cada campo de entrada é usado para identificar os dados quando o formulário é submetido. O formulário usa o método GET para enviar os dados, o que significa que os dados serão anexados à URL como parâmetros de query string quando o formulário for enviado. O botão "Limpar" button type="reset" permite ao usuário limpar os campos do formulário.</p>
+                        <form method="get">
+                            <label>Nome: </label><input type="text" name="name">
+                            <br>
+                            <br>
+                            <label>Idade: </label><input type="number" name="age">
+                            <br>
+                            <br>
+                            <label>Senha: </label><input type="password" name="password">
+                            <br>
+                            <br>
+                            <button type="reset">Limpar</button>
+                        </form>
+                </li>
+                <br>
+                <br>
+
+
+                <li>
+                    <strong>Submit: </strong>Submete o formulário em que está contido.
+                    
+                    <p>O exemplo abaixo mostra um formulário que usa o método GET para enviar dados. Ele possui campos de entrada de texto para "name", número para "age", e senha para "password". Há quebras de linha para espaçamento entre os elementos. O botão "Enviar" é do tipo submit, o que significa que ele enviará o formulário quando clicado. Usando o onsubmit no form posso realizar a validação das informações antes do envio para o servidor.</p>
+                        <form onsubmit="" method="get">
+                            <label>Nome: </label><input type="text" name="name">
+                            <br>
+                            <br>
+                            <label>Idade: </label><input type="number" name="age">
+                            <br>
+                            <br>
+                            <label>Senha: </label><input type="password" name="password">
+                            <br>
+                            <br>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </li>
+                    <br>
+            </ul>
+
+
+
+    <h3 id="select"><strong>4. Select e Seus Tipos:</strong></h3>
+
+    <small><a href="#formularios">(voltar)</a></small>
+    <br>
+    <br>
+
+        <p>O elemento select em HTML cria uma lista suspensa de opções para os usuários escolherem. Ele é usado em conjunto com os elementos option para definir as opções da lista.  Pode-se usar o selected para deixar o campo pré-selecionado na exibição, no exemplo abaixo deixei o frontend como pré-selecionado.Também é possível deixar a possibilidade de selecionar mais de uma opção, utilizando o multiple no select.</p>
+                
+        <p>O exemplo abaixo utiliza diversas tags para criar um formulário interativo. Primeiro, a tag form define o início do formulário e especifica o método GET para enviar os dados. Dentro do formulário, a tag label é usada para adicionar uma etiqueta descritiva para o campo de entrada de texto, seguido pela tag input type="text" que cria um campo onde o usuário pode digitar seu nome.
+
+        <p>Em seguida, a tag select é empregada para criar um menu suspenso, permitindo ao usuário escolher um cargo ou mais de um. Dentro desta tag, a option define cada uma das opções disponíveis, com uma delas predefinida como "Frontend Developer" usando o atributo selected.</p>
+                    
+        <p>Para a inserção de um assunto, outra tag input é usada, desta vez com o tipo "text", que cria um campo onde o usuário pode digitar o assunto. Por fim, a tag button cria um botão que, quando clicado, submete o formulário, enviando os dados preenchidos para o servidor.</p> 
+        <br>
+
+            <form method="get">
+                <label>Nome: </label><input type="text" name="name">
+                <br>
+                <br>
+                <label>Cargo: </label>
+                <select name="role" multiple>
+                    <option value="">Selecione o cargo</option>
+                    <option value="fullstack">Fullstack Developer</option>
+                    <option selected value="frontend">Frontend Developer</option>
+                    <option value="backend">Backend Developer</option>
+                    <option value="devops">Devops</option>
+                    <option value="dados">Data Analytics</option>
+                    <option value="game">Game Developer</option>
+                </select>
+                <br>
+                <br>
+                <label>Assunto: </label><input type="text" name="subject">
+                <br>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+            <br>
+       
+
+
+    <h3 id="textarea"><strong>5. Textarea:</strong></h3>
+
+    <small><a href="#formularios">(voltar)</a></small>
+    <br>
+    <br>
+        <p>A tag textarea em HTML é usada para criar uma área de texto multi-linha em formulários, onde os usuários podem inserir texto livremente. Essa tag é útil quando você deseja permitir que os usuários escrevam mensagens longas, comentários ou qualquer outra forma de texto que necessite de mais espaço do que um campo de texto normal.</p>
+
+        <p>O atributo rows define o número de linhas visíveis do textarea.</p>
+
+        <p>O atibuto cols define o número de colunas visíveis do textarea.</p>
+
+        <p>O exemplo abaixo define um formulário que captura informações como nome, cargo, assunto e mensagem. Cada campo é apresentado com um rótulo descritivo label> para orientação do usuário. O campo de nome usa um elemento de entrada de texto input type="text", enquanto o campo de cargo é um menu suspenso select que permite seleção múltipla, indicado pelo atributo multiple.</p>
+
+        <p>Dentro do menu suspenso, há várias opções option que o usuário pode escolher. A opção "Frontend Developer" já está selecionada por padrão, indicado pelo atributo selected. Os campos de assunto e mensagem são criados de forma semelhante ao campo de nome, usando input type="text"> para o assunto e textarea para a mensagem, que permite entrada de texto em várias linhas.</p>
+
+        <p>Por fim, o formulário possui um botão de envio button type="submit"que, quando clicado, submete os dados inseridos para algum destino especificado no atributo action da tag form. Neste caso, como não há um atributo action, os dados serão enviados para a própria página atual, mas visíveis na URL devido ao uso do método GET.</p>
+            
+        <br> 
+
+            <form method="get">
+                <label>Nome: </label><input type="text" name="name">
+                <br>
+                <br>
+                <label>Cargo: </label>
+                <select name="role" multiple>
+                    <option value="">Selecione o cargo</option>
+                    <option value="fullstack">Fullstack Developer</option>
+                    <option selected value="frontend">Frontend Developer</option>
+                    <option value="backend">Backend Developer</option>
+                    <option value="devops">Devops</option>
+                    <option value="dados">Data Analytics</option>
+                    <option value="game">Game Developer</option>
+                </select>
+                <br>
+                <br>
+                <label>Assunto: </label><input type="text" name="subject">
+                <br>
+                <br>
+                <label>Mensagem: </label>
+                <textarea rows="2" cols="20" name="message"></textarea>
+                <br>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+
+
+    <hr>
+    <br>
+    <small>
+        <<
+        <a href="../index.html">(Voltar para a pagina inicial)</a>
+    </small>
+    <br>
+    <br>
+                  
+                   
+                    
