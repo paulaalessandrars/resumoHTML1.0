@@ -1,4 +1,4 @@
-# Resumo de HTML em Formato de Página Web
+# Resumo de HTML em Formato de Página Web v1.0
 
 Neste repositório, compilei um resumo de tudo que aprendi sobre HTML até o momento, organizando o conteúdo no formato de uma página web para aplicar os conhecimentos adquiridos. Os tópicos abordados são:
 
