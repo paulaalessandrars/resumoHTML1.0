@@ -3,7 +3,7 @@
 Neste repositório, compilei um resumo de tudo que aprendi sobre HTML até o momento, organizando o conteúdo no formato de uma página web para aplicar os conhecimentos adquiridos. Os tópicos abordados são:
 
 ## Primeiros Passos
-- **Introdução ao HTML:** Conceitos iniciais e a estrutura básica de um documento HTML.
+- **Introdução ao HTML:** Conceitos iniciais e a estrutura básica de um documento HTML;
 - **Desafios:** Exercícios práticos para reforçar o aprendizado dos fundamentos de HTML.
 
 ## Conceitos Básicos
